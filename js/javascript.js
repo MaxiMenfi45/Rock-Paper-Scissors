@@ -56,49 +56,57 @@ function playerSelection(){
 
 function game(p, c)
 {
-
-    let i = 0;
-
-
-
-    
-
-    
+ 
+        
+   
     {
+
 
         if (typeof p === 'string' && typeof c === 'string')
         {
 
         if(p.localeCompare(c , 'en', {sensitivity : 'base'}) === 0)
         {     
-        console.log("Tie!");
+            console.log("Tie!");
+
         }
 
         else if(p === 'rock' && c ==='paper' )
         {
+
         console.log("You Lose! Paper beats Rock")
+        return 0;
         }
         else if(p ==='paper' && c==='rock')
-        {                    ///ROCK AND PAPER ROUND
+        {                                                       ///ROCK AND PAPER ROUND
         console.log("You Win! Paper beats Rock")
+        return 1;
+
         }
 ///-----------------------------------------------------
         else if(p === 'scissors' && c ==='rock' )
         {
-        console.log("You Lose! Rock beats Scissors")
+
+        console.log("You Lose! Rock beats Scissors")            /// ROCK AND SCISSORS ROUND
+        return  0;          
         }
         else if(p ==='rock' && c==='scissors')
-        {                   /// ROCK AND SCISSORS ROUND
+        {                   
         console.log("You Win! Rock beats Scissors")
+            return 1;
         }
 ///-----------------------------------------------------
         else if(p === 'paper' && c ==='scissors' )
         {
+
         console.log("You Lose! Scissors beats Paper")
+        return 0;
         }               
-        else if(p ==='scissors' && c==='paper')
-            {                   /// SCISSORS AND PAPER ROUND
-        console.log("You Win! Scissors beats Paper")
+        else if(p ==='scissors' && c==='paper')              /// SCISSORS AND PAPER ROUND
+            { 
+                
+        console.log("  You Win! Scissors beats Paper")
+        return 1;
             }
    
         }
@@ -108,5 +116,5 @@ function game(p, c)
             }
     }
 
-    
+
  }

@@ -12,16 +12,36 @@
     <script>
             welcome();          /// Welcome 
 
-            let i = 0;
-
+            let i = 0 , cont = 0,consult,r,player=0,computer=0;
+            
 
         for(i  ; i < 5 ;i++ )
         {
+            cont++;
              console.log("round", i + 1  );
             let playerChoice = playerSelection();
             const computerChoice = setComputerChoise(getComputerChoice());
-            game(playerChoice,computerChoice);
-    
+            r =  game(playerChoice,computerChoice);
+
+        
+
+            if(r === 1){
+                player++;
+            }
+            if(r === 0){
+                computer++;
+            }
+
+            if(player > computer){
+                console.log("Player Wins");
+            }
+            else if(computer > player){
+                console.log("Computer Wins");
+            }
+            else{
+                console.log("TIE");
+            }
+            
          }
 
     </script>
