@@ -54,39 +54,59 @@ function playerSelection(){
 
 
 
-function game(p, c){
+function game(p, c)
+{
 
-    if (typeof p === 'string' && typeof c === 'string'){
+    let i = 0;
 
-    if(p.localeCompare(c , 'en', {sensitivity : 'base'}) === 0){     
+
+
+    
+
+    
+    {
+
+        if (typeof p === 'string' && typeof c === 'string')
+        {
+
+        if(p.localeCompare(c , 'en', {sensitivity : 'base'}) === 0)
+        {     
         console.log("Tie!");
-    }
+        }
 
-    else if(p === 'rock' && c ==='paper' ){
+        else if(p === 'rock' && c ==='paper' )
+        {
         console.log("You Lose! Paper beats Rock")
-    }
-    else if(p ==='paper' && c==='rock'){                    ///ROCK AND PAPER ROUND
+        }
+        else if(p ==='paper' && c==='rock')
+        {                    ///ROCK AND PAPER ROUND
         console.log("You Win! Paper beats Rock")
-    }
+        }
 ///-----------------------------------------------------
-    else if(p === 'scissors' && c ==='rock' ){
+        else if(p === 'scissors' && c ==='rock' )
+        {
         console.log("You Lose! Rock beats Scissors")
-    }
-    else if(p ==='rock' && c==='scissors'){                   /// ROCK AND SCISSORS ROUND
+        }
+        else if(p ==='rock' && c==='scissors')
+        {                   /// ROCK AND SCISSORS ROUND
         console.log("You Win! Rock beats Scissors")
-    }
+        }
 ///-----------------------------------------------------
-    else if(p === 'paper' && c ==='scissors' ){
+        else if(p === 'paper' && c ==='scissors' )
+        {
         console.log("You Lose! Scissors beats Paper")
-    }               
-    else if(p ==='scissors' && c==='paper'){                   /// SCISSORS AND PAPER ROUND
+        }               
+        else if(p ==='scissors' && c==='paper')
+            {                   /// SCISSORS AND PAPER ROUND
         console.log("You Win! Scissors beats Paper")
-    }
+            }
    
-    }
+        }
 
-    else{
+        else{
         console.log("Invalid Imput.");
+            }
     }
 
-}
+    
+ }
