@@ -10,11 +10,10 @@
  <script src="js/javascript.js"></script>  
 
     <script>
-        welcome();
-        getComputerChoice();
-        playerSelection()
-        setComputerChoise(getComputerChoice);
-
+            welcome();          /// Welcome 
+            let playerChoice = playerSelection();
+            const computerChoice = setComputerChoise(getComputerChoice());
+            game(playerChoice,computerChoice);
     </script>
 
 

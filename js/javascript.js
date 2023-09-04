@@ -8,28 +8,31 @@ function welcome (){
 
 
 function getComputerChoice(){
-    let choise = parseInt(console.log(Math.random()*3))                     /// Get a random number
+     let choice = Math.floor((Math.random()*3))                     /// Get a random number
 
+    return choice;
 }
 
 function setComputerChoise(n){
 
+    let choiseComputer;
+    let rock, paper, scissors;
 
     switch(n){
 
         case 0 :
             
-            choiseComputer = rock;
+            choiseComputer = "rock";
             console.log("ROCK!");
             break;
 
         case 1 :
-            choiseComputer = paper;                    /// Evalue of random number
+            choiseComputer = "paper";                    /// Evalue of random number
             console.log("Paper!");
             break;
 
          case 2 :
-            choiseComputer = scissors;
+            choiseComputer = "scissors";
             console.log("Scissors!");
             break;
 
@@ -46,14 +49,16 @@ function playerSelection(){
 
     let selection = prompt("Choose your choice");                       /// Player's choise
 
-    return selection;
+    return selection.toLocaleLowerCase;
 }
 
 
 
 function game(p, c){
 
-    if(p.localeCompare(c , 'en', {sensivity : 'base'}) === 0){
+    if (typeof p === 'string' && typeof c === 'string'){
+
+    if(p.localeCompare(c , 'en', {sensitivity : 'base'}) === 0){     
         console.log("Tie!");
     }
 
@@ -77,6 +82,11 @@ function game(p, c){
     else if(p ==='scissors' && c==='paper'){                   /// SCISSORS AND PAPER ROUND
         console.log("You Win! Scissors beats Paper")
     }
+   
+    }
 
+    else{
+        console.log("Invalid Imput.");
+    }
 
 }
