@@ -20,18 +20,17 @@ function setComputerChoise(n){
         case 0 :
             
             choiseComputer = rock;
-            return choiseComputer;
             console.log("ROCK!");
             break;
 
         case 1 :
-            choiseComputer = paper;
-            return choiseComputer;                                         /// Evalue of random number
+            choiseComputer = paper;                    /// Evalue of random number
+            console.log("Paper!");
             break;
 
          case 2 :
             choiseComputer = scissors;
-            return choiseComputer;
+            console.log("Scissors!");
             break;
 
         default :
@@ -39,6 +38,45 @@ function setComputerChoise(n){
         return -1;
             break;
     }
+    return choiseComputer;
 
 }
 
+function playerSelection(){
+
+    let selection = prompt("Choose your choice");                       /// Player's choise
+
+    return selection;
+}
+
+
+
+function game(p, c){
+
+    if(p.localeCompare(c , 'en', {sensivity : 'base'}) === 0){
+        console.log("Tie!");
+    }
+
+    else if(p === 'rock' && c ==='paper' ){
+        console.log("You Lose! Paper beats Rock")
+    }
+    else if(p ==='paper' && c==='rock'){                    ///ROCK AND PAPER ROUND
+        console.log("You Win! Paper beats Rock")
+    }
+///-----------------------------------------------------
+    else if(p === 'scissors' && c ==='rock' ){
+        console.log("You Lose! Rock beats Scissors")
+    }
+    else if(p ==='rock' && c==='scissors'){                   /// ROCK AND SCISSORS ROUND
+        console.log("You Win! Rock beats Scissors")
+    }
+///-----------------------------------------------------
+    else if(p === 'paper' && c ==='scissors' ){
+        console.log("You Lose! Scissors beats Paper")
+    }               
+    else if(p ==='scissors' && c==='paper'){                   /// SCISSORS AND PAPER ROUND
+        console.log("You Win! Scissors beats Paper")
+    }
+
+
+}
