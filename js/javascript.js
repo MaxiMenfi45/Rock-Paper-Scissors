@@ -49,7 +49,7 @@ function playerSelection(){
 
     let selection = prompt("Choose your choice");                       /// Player's choise
 
-    return selection.toLocaleLowerCase;
+    return selection.toLocaleLowerCase();
 }
 
 
