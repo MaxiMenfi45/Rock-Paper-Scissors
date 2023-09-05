@@ -136,35 +136,64 @@ function game(p, c)
 
  ///-----------------------------------------------------DOM-------------------------------------------
 
-const buttomRock =document.getElementById("buttomRock");
-        ///Get Rock
+///const turnChildImgUser=document.getElementById("turnChildImgUser"); ///Img of the user in the firx box
+///const turnChildImgComputer =document.getElementById("turnChildImgComputer"); ///Img of the computer en the second box
 
-
-const buttomPaper =document.getElementById("buttomPaper");    /// Get Paper
-
-
-
-const buttomScissors =document.getElementById("buttomScissors");        
-buttomScissors.addEventListener("click",getScissors);      /// Get Scissors
-
-
-const turnChildImgUser=document.getElementById("turnChildImgUser"); ///Img of the user in the firx box
-const turnChildImgComputer =document.getElementById("turnChildImgComputer"); ///Img of the computer en the second box
-
-function changeToRock(){
-    const img = document.getElementById("turnChildImgUser") ;
-    img.src="/img/rock1.png";
+function changeToRockUser(){
+    const img = document.getElementById("turnChildImgUser") ;   
+    img.src="/img/rock1.png";       ///Change the first box to rock *USER*
+    return "rock";
 }
 
-function changetoPaper(){
+function changetoPaperUser(){
     const img = document.getElementById("turnChildImgUser");
-    img.src="/img/paper.png";
+    img.src="/img/paper.png";       ///Change the first box to paper *USER*
+    return "paper";
 }
 
-function changetoScissors(){
+function changetoScissorsUser(){
     const img = document.getElementById("turnChildImgUser");
-    img.src="/img/scissors.png";
+    img.src="/img/scissors.png";       ///Change the first box to scissors *USER*
+    return "scissors";
 }
+
+function changeToRockComputer(){
+    const img = document.getElementById("turnChildImgComputer") ;   
+    img.src="/img/rock1.png";       ///Change the first box to rock *COMPUTER*
+    return "rock";
+}
+
+function changeToPaperComputer(){
+    const img = document.getElementById("turnChildImgComputer") ;
+    img.src="/img/paper.png";   ///Change the first box to paper *COMPUTER*
+    return "paper";
+}
+
+function changeToScissorsComputer(){
+    const img = document.getElementById("turnChildImgComputer") ;
+    img.src="/img/scissors.png"; ///Change the first box to scissors *COMPUTER*
+    return "scissors";
+}
+
+
+function evalueComputer(x){
+
+    switch(x){
+        case 0:
+            changeToRockComputer();
+            break;
+        case 1:
+            changeToPaperComputer();
+             break;
+         case 2:
+            changeToScissorsComputer();
+            break;
+        default:
+            return -1;
+            break;
+    }
+}
+
 
 
 
