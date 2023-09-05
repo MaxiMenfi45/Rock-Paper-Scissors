@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    height: 150px;                          /*Welcome to Rock..*/
+    color: bisque;
+    width: 100%;
+    font-size: 22px;
+    padding: 10px;
+}
+/*-----------------------------------------------------------------------*/
+.status{
+    display: flex;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;            /* STATUS WIN, LOSE...*/
+    padding: 20px;
+    width: 100%;
+    font-size: 18px;
+    color: bisque;
+}
+/*-----------------------------------------------------------------------*/
+.playeAndComputer{
+    display: flex;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: black;
+    height: 70px;
+    padding: 10px;                       /*Text You | Computer */
+}
+
+.playeAndComputer>.nameChild{
+    color: beige;
+    font-size: 30px;
+}
+/*-----------------------------------------------------------------------*/
+.turnContainer{
+    display: flex;
+    height: 200px;
+    background-color: brown;
+    align-items: center;
+    justify-content: center;        /*Container of turns*/
+    gap: 20px;
+}
+.turnContainer>.turnChild{
+    height: 10rem;
+    border: 2px solid rgb(4, 4, 255);
+    width: 10rem;
+    padding: 5px;
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+
+.opcContainer{
+
+    display: flex;
+    height: 250px;
+    background-color: blue;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+
+}
+
+.childOpc{
+    height: 10rem;
+    padding: 10px;
+    border: 2px solid red;
+    width: 10rem;
+    cursor: pointer;
+}

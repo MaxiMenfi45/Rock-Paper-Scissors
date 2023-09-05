@@ -4,24 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+
+        <div class="header"> 
+            <h1>Welcome to Rock, Paper and scissors!</h1>
+        </div>
+
+
+
+        <div class="status">
+            <h2>Here is the status of the game : win, lose, tie.</h2>
+        </div>
+
+
+
+        <div class="playeAndComputer">
+            <div class="nameChild">You </div>
+            <div class="nameChild"> Computer</div>
+        </div>
+
+        <div class="turnContainer">
+
+            <img src="/img/y.png" alt="" class="turnChild" id="turnChildImgUser">
+            <img src="/img/y.png" alt="" class="turnChild" id="turnChildImgComputer">
+        </div>
+
+            
+
+        <div class="opcContainer">
+
+                
+                <img class="childOpc" src="/img/rock1.png" alt="" id="buttomRock" onclick="changeToRock()" >
+                <img class="childOpc"  src="/img/paper.png" alt="" id="buttomPaper" onclick="changetoPaper()">
+                <img class="childOpc"  src="/img/scissors.png" alt="" id="buttomScissors" onclick="changetoScissors()">
+
+        </div>
+
+
+   
+
+        <button>
+            <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+        </button>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  <script src="js/javascript.js"></script>  
 
     <script>
-            welcome();          /// Welcome 
+           /// welcome();          /// Welcome 
 
             let i = 0 , cont = 0,consult,r,player=0,computer=0;
             
 
-        for(i  ; i < 5 ;i++ )
+       // for(i  ; i < 5 ;i++ )
         {
-            cont++;         /// rounds counter
-             console.log("round", i + 1  );
-            let playerChoice = playerSelection();
+      //      cont++;         /// rounds counter
+        //     console.log("round", i + 1  );
+       ///     let playerChoice = playerSelection();
             const computerChoice = setComputerChoise(getComputerChoice());
-            r =  game(playerChoice,computerChoice);
+        //    r =  game(playerChoice,computerChoice);
 
         
 
@@ -31,20 +94,20 @@
             if(r === 0){
                 computer++;
             }
-            if(cont == 5)
+        //    if(cont == 5)
             {
-            if(player > computer){
-                console.log("Player Wins");
+          //  if(player > computer){
+          //      console.log("Player Wins");
             }
-            else if(computer > player){
-                console.log("Computer Wins");
+       //     else if(computer > player){
+        //        console.log("Computer Wins");
             }
-            else{
-                console.log("TIE");
-            }
-            }
+        //    else{
+      //          console.log("TIE");
+     //       }
+     //       }
         
-         }
+   //      }
 
     </script>
 

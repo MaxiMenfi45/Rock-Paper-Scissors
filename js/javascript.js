@@ -118,3 +118,57 @@ function game(p, c)
 
 
  }
+
+ function getRock(){
+     console.log("You select Rock");
+     return "rock"
+    }
+ function getPaper(){
+     console.log("You select Paper");
+    return "paper"
+ }
+ function getScissors(){
+     console.log("You select Scissors");
+    return "scissors"
+ }
+
+
+
+ ///-----------------------------------------------------DOM-------------------------------------------
+
+const buttomRock =document.getElementById("buttomRock");
+        ///Get Rock
+
+
+const buttomPaper =document.getElementById("buttomPaper");    /// Get Paper
+
+
+
+const buttomScissors =document.getElementById("buttomScissors");        
+buttomScissors.addEventListener("click",getScissors);      /// Get Scissors
+
+
+const turnChildImgUser=document.getElementById("turnChildImgUser"); ///Img of the user in the firx box
+const turnChildImgComputer =document.getElementById("turnChildImgComputer"); ///Img of the computer en the second box
+
+function changeToRock(){
+    const img = document.getElementById("turnChildImgUser") ;
+    img.src="/img/rock1.png";
+}
+
+function changetoPaper(){
+    const img = document.getElementById("turnChildImgUser");
+    img.src="/img/paper.png";
+}
+
+function changetoScissors(){
+    const img = document.getElementById("turnChildImgUser");
+    img.src="/img/scissors.png";
+}
+
+
+
+
+
+
+
