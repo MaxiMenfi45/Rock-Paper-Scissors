@@ -59,7 +59,7 @@ function game(p, c)
         else if(p ==='scissors' && c==='paper')              /// SCISSORS AND PAPER ROUND
             { 
                 
-        console.log("  You Win! Scissors beats Paper")
+        console.log("You Win! Scissors beats Paper")
         return 1;
             }
    
@@ -99,19 +99,19 @@ function changetoScissorsUser(){
 
 function changeToRockComputer(){
     const img = document.getElementById("turnChildImgComputer") ;   
-    img.src="/img/rock1.png";       ///Change the first box to rock *COMPUTER*
+    img.src="/img/rock1.png";       ///Change the second box to rock *COMPUTER*
     return "rock";
 }
 
 function changeToPaperComputer(){
     const img = document.getElementById("turnChildImgComputer") ;
-    img.src="/img/paper.png";   ///Change the first box to paper *COMPUTER*
+    img.src="/img/paper.png";   ///Change the second box to paper *COMPUTER*
     return "paper";
 }
 
 function changeToScissorsComputer(){
     const img = document.getElementById("turnChildImgComputer") ;
-    img.src="/img/scissors.png"; ///Change the first box to scissors *COMPUTER*
+    img.src="/img/scissors.png"; ///Change the second box to scissors *COMPUTER*
     return "scissors";
 }
 
@@ -121,18 +121,105 @@ function evalueComputer(x){
     switch(x){
         case 0:
             changeToRockComputer();
+            return "rock";
             break;
         case 1:
-            changeToPaperComputer();                ///Transform the random numbner  | Get a computer Choise
+            changeToPaperComputer();    
+             return "paper";          ///Transform the random numbner  | Get a computer Choise
              break;
          case 2:
             changeToScissorsComputer();
+            return "scissors"; 
             break;
         default:
             return -1;
             break;
     }
 }
+
+
+let scoreChildrenUser = document.getElementById("scoreChildrenUser");
+//let scoreChildrenComputer = document.getElementById("scoreChildrenComputer");
+//let countererComputer = 0;
+let countererUser = 0;
+function counterGame(result){
+
+    if(result === 1){
+
+        countererUser++;
+        scoreChildrenUser.innerHTML = countererUser;
+    }
+    else if(result === 0){
+        
+        countererComputer++;
+        scoreChildrenComputer.innerHTML = countererComputer;
+        
+    }
+}
+
+let countererComputer = 0;
+
+function playGameRock(){
+
+    const scoreChildrenComputer = document.getElementById("scoreChildrenComputer");
+
+    let choiseRock = game('rock',evalueComputer(getComputerChoice()));
+    
+    if(choiseRock === 1){
+
+        countererUser++;
+        scoreChildrenUser.innerHTML = countererUser;
+    }
+    else if(choiseRock === 0){
+        
+        countererComputer++;
+        scoreChildrenComputer.innerHTML = countererComputer;
+        
+    }
+}
+
+
+
+function playGamePaper(){
+
+    const scoreChildrenComputer = document.getElementById("scoreChildrenComputer");
+
+    let choiseRock = game('paper',evalueComputer(getComputerChoice()));
+    
+    if(choiseRock === 1){
+
+        countererUser++;
+        scoreChildrenUser.innerHTML = countererUser;
+    }
+    else if(choiseRock === 0){
+        
+        countererComputer++;
+        scoreChildrenComputer.innerHTML = countererComputer;
+        
+    }
+}
+
+
+
+function playGameScissors(){
+
+    const scoreChildrenComputer = document.getElementById("scoreChildrenComputer");
+
+    let choiseRock = game('scissors',evalueComputer(getComputerChoice()));
+    
+    if(choiseRock === 1){
+
+        countererUser++;
+        scoreChildrenUser.innerHTML = countererUser;
+    }
+    else if(choiseRock === 0){
+        
+        countererComputer++;
+        scoreChildrenComputer.innerHTML = countererComputer;
+        
+    }
+}
+
 
 
 
