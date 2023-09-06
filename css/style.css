@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(0, 0, 0);
-    height: 150px;                          /*Welcome to Rock..*/
+    height: 50px;                          /*Welcome to Rock..*/
     color: bisque;
     width: 100%;
     font-size: 22px;
@@ -17,7 +17,7 @@
 /*-----------------------------------------------------------------------*/
 .status{
     display: flex;
-    height: 80px;
+    height: 50px;
     background-color: rgb(0, 0, 0);
     align-items: center;
     justify-content: center;            /* STATUS WIN, LOSE...*/
@@ -41,19 +41,20 @@
 .playeAndComputer>.nameChild{
     color: beige;
     font-size: 30px;
+    padding: 5px;
 }
 /*-----------------------------------------------------------------------*/
 .turnContainer{
     display: flex;
     height: 200px;
-    background-color: brown;
+    background-color: rgb(0, 0, 0);
     align-items: center;
     justify-content: center;        /*Container of turns*/
     gap: 20px;
 }
 .turnContainer>.turnChild{
     height: 10rem;
-    border: 2px solid rgb(4, 4, 255);
+    border-radius: 50px;
     width: 10rem;
     padding: 5px;
 }
@@ -66,7 +67,7 @@
 
     display: flex;
     height: 250px;
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -74,10 +75,54 @@
 
 }
 
-.childOpc{
+.childOpc{                                  /* DESICIONS OF USER */
     height: 10rem;
     padding: 10px;
-    border: 2px solid red;
+
     width: 10rem;
     cursor: pointer;
+    border-radius: 200px;
+
+}
+
+/*-------------------------------------------------------------*/
+
+
+.scoreContainer{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    background-color: black;
+}                                               /* SCORE */
+
+.scoreContainer>.scoreChildren{
+    height: 50px;
+    width: 25px;
+    border: 2px solid red;
+    padding: 10px;
+    font-size: 30px;
+    color: azure;
+
+
+}
+
+/*-------------------------------------------------*/
+
+.weaponContainer{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}                                               /*CHOISE YOUR WEAPON*/
+
+.weaponContainer>.weaponChild{
+ font-weight: bold;
+ font-size: 35px;
+ color: azure;
+
 }

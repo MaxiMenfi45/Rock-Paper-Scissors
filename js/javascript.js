@@ -1,55 +1,9 @@
 
 
-function welcome (){
-
-    console.log("Welcome to Rock paper scissors ! ")
-    console.log("Please enter your option: Rock, Paper or Scissors.");      ///Welcome in the game!
-}
-
-
 function getComputerChoice(){
      let choice = Math.floor((Math.random()*3))                     /// Get a random number
 
     return choice;
-}
-
-function setComputerChoise(n){
-
-    let choiseComputer;
-    let rock, paper, scissors;
-
-    switch(n){
-
-        case 0 :
-            
-            choiseComputer = "rock";
-            console.log("ROCK!");
-            break;
-
-        case 1 :
-            choiseComputer = "paper";                    /// Evalue of random number
-            console.log("Paper!");
-            break;
-
-         case 2 :
-            choiseComputer = "scissors";
-            console.log("Scissors!");
-            break;
-
-        default :
-    
-        return -1;
-            break;
-    }
-    return choiseComputer;
-
-}
-
-function playerSelection(){
-
-    let selection = prompt("Choose your choice");                       /// Player's choise
-
-    return selection.toLocaleLowerCase();
 }
 
 
@@ -119,20 +73,6 @@ function game(p, c)
 
  }
 
- function getRock(){
-     console.log("You select Rock");
-     return "rock"
-    }
- function getPaper(){
-     console.log("You select Paper");
-    return "paper"
- }
- function getScissors(){
-     console.log("You select Scissors");
-    return "scissors"
- }
-
-
 
  ///-----------------------------------------------------DOM-------------------------------------------
 
@@ -183,7 +123,7 @@ function evalueComputer(x){
             changeToRockComputer();
             break;
         case 1:
-            changeToPaperComputer();
+            changeToPaperComputer();                ///Transform the random numbner  | Get a computer Choise
              break;
          case 2:
             changeToScissorsComputer();
@@ -193,6 +133,9 @@ function evalueComputer(x){
             break;
     }
 }
+
+
+
 
 
 
