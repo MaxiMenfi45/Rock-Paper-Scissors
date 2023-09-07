@@ -83,7 +83,7 @@ function game(p, c)
 function changeToRockUser(){
     if(gameFinished==false){
     const img = document.getElementById("turnChildImgUser") ;   
-    img.src="/img/rock1.png";       ///Change the first box to rock *USER*
+    img.src="img/rock1.png";       ///Change the first box to rock *USER*
     return "rock";
     }
 }
@@ -91,7 +91,7 @@ function changeToRockUser(){
 function changetoPaperUser(){
     if(gameFinished==false){
     const img = document.getElementById("turnChildImgUser");
-    img.src="/img/paper.png";       ///Change the first box to paper *USER*
+    img.src="img/paper.png";       ///Change the first box to paper *USER*
     return "paper";
     }
 }
@@ -99,26 +99,26 @@ function changetoPaperUser(){
 function changetoScissorsUser(){
     if(gameFinished==false){
     const img = document.getElementById("turnChildImgUser");
-    img.src="/img/scissors.png";       ///Change the first box to scissors *USER*
+    img.src="img/scissors.png";       ///Change the first box to scissors *USER*
     return "scissors";
     }
 }
 
 function changeToRockComputer(){
     const img = document.getElementById("turnChildImgComputer") ;   
-    img.src="/img/rock1.png";       ///Change the second box to rock *COMPUTER*
+    img.src="img/rock1.png";       ///Change the second box to rock *COMPUTER*
     return "rock";
 }
 
 function changeToPaperComputer(){
     const img = document.getElementById("turnChildImgComputer") ;
-    img.src="/img/paper.png";   ///Change the second box to paper *COMPUTER*
+    img.src="img/paper.png";   ///Change the second box to paper *COMPUTER*
     return "paper";
 }
 
 function changeToScissorsComputer(){
     const img = document.getElementById("turnChildImgComputer") ;
-    img.src="/img/scissors.png"; ///Change the second box to scissors *COMPUTER*
+    img.src="img/scissors.png"; ///Change the second box to scissors *COMPUTER*
     return "scissors";
 }
 
