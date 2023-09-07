@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
+
+
 </head>
 <body>
 
@@ -16,7 +18,7 @@
 
 
         <div class="status">
-            <h2>Here is the status of the game : win, lose, tie.</h2>
+            <h2 id="subText">Here is the status of the game : win, lose, tie.</h2>
         </div>
 
 
@@ -46,20 +48,25 @@
             
 
                
-                <img class="childOpc" src="/img/rock1.png" alt="" id="buttomRock" onclick="changeToRockUser();evalueComputer(getComputerChoice());playGameRock();" >
-                <img class="childOpc"  src="/img/paper.png" alt="" id="buttomPaper" onclick="changetoPaperUser();evalueComputer(getComputerChoice());playGamePaper();">
-                <img class="childOpc"  src="/img/scissors.png" alt="" id="buttomScissors" onclick="changetoScissorsUser();evalueComputer(getComputerChoice());playGameScissors();">
+                <img class="childOpc" src="/img/rock1.png" alt="" id="buttomRock" onclick="changeToRockUser();subTextScore('rock', evalueComputer(getComputerChoice()));playGameRock();incrementRoundCounter()" >
+                <img class="childOpc"  src="/img/paper.png" alt="" id="buttomPaper" onclick="changetoPaperUser();subTextScore('paper', evalueComputer(getComputerChoice()));playGamePaper();incrementRoundCounter()">
+                <img class="childOpc"  src="/img/scissors.png" alt="" id="buttomScissors" onclick="changetoScissorsUser();subTextScore('scissors', evalueComputer(getComputerChoice()));playGameScissors();incrementRoundCounter()">
 
               
         <!--  The order is as follows: Choose the option put by the user (rock for example), the one assigned by the computer. and finally in the game() function it evaluates how it gave the result.-->
 
         </div>
+        <div class="retryContainer">
+            <button class="retryChildT" id="retryChild" style="display: none;"  >Retry!</button>
+
+        </div>
 
 
-   
+        <div class="containerFooter">
+            <footer class="footerF">Thanks for playing! . All rights reserved © The Odin Project.</footer>
+        </div>
 
+        <script src="js/javascript.js"></script> 
 
-
-        <script src="js/javascript.js"></script>  
 </body>
 </html>
